@@ -1,0 +1,41 @@
+@import '../../variables';
+
+.main-title {
+  font-size: 10vmin;
+  text-align: center;
+  margin: 0 0 2vmin;
+}
+
+.todo-table {
+  background: $bg-light;
+  width: 80vmin;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: #aaa .5vmin .5vmin 3vmin 0;
+
+  &__head {
+    background: $bd-dark;
+    padding: 2vmin;
+  }
+
+  &__body {
+    padding: 2vmin;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  &__footer {
+    background: $bd-dark;
+    padding: 2vmin;
+  }
+}
+
+.create-todo {
+  font: 2vmin/1.2 Arial, sans-serif;
+  border-style: none;
+  background: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}

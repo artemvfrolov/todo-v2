@@ -1,0 +1,9 @@
+<div class="todo-list__row" [ngClass]="{'todo-list__row_finished': todo.finished}">
+  <div class="check-block">
+    <div class="check-block__element" (click)="todo.changeTodoStatus()"></div>
+  </div>
+  <div class="row-name">
+    <div class="row-name__text">{{todo.todoText}}</div>
+  </div>
+  <app-todo-control [todo]="todo"></app-todo-control>
+</div>

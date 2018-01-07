@@ -1,0 +1,27 @@
+.control {
+  display: flex;
+  padding: 0 0 0 3vmin;
+  flex: 0 0 auto;
+  justify-content: space-around;
+  user-select: none;
+
+  &__element {
+    padding: 0 1vmin;
+    margin: 0 0 0 1vmin;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &_del {
+      font-size: 2rem;
+    }
+
+    &:hover {
+      opacity: .5;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
