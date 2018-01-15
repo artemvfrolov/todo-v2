@@ -1,0 +1,16 @@
+<h1 class="main-title">todo's</h1>
+<div class="todo-table">
+  <div class="todo-table__head">
+    <form class="form" (submit)="addNewTodo(todotext)">
+      <input
+        class="create-todo"
+        type="text"
+        placeholder="Create new todo"
+        #todotext>
+    </form>
+  </div>
+  <div class="todo-table__body">
+    <app-todos-list [todosList]="todosList" (removeTodo)="removeTodoElement($event)"></app-todos-list>
+  </div>
+  <div class="todo-table__footer">footer</div>
+</div>
