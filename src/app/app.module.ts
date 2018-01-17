@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
-import { TodosListComponent } from './todos-list/todos-list.component';
-import { TodoControlComponent } from './todo-control/todo-control.component';
 import { TodosElementComponent } from './todos-element/todos-element.component';
 
 
@@ -13,8 +11,6 @@ import { TodosElementComponent } from './todos-element/todos-element.component';
   declarations: [
     AppComponent,
     TodoComponent,
-    TodosListComponent,
-    TodoControlComponent,
     TodosElementComponent
   ],
   imports: [

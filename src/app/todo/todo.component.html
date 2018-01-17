@@ -9,8 +9,26 @@
         #todotext>
     </form>
   </div>
-  <div class="todo-table__body">
-    <app-todos-list [todosList]="todosList" (removeTodo)="removeTodoElement($event)"></app-todos-list>
+  <div class="todo-table__body" *ngIf="todosList.length">
+    <div class="todo-list">
+      <app-todos-element *ngFor="let todo of todosList"
+                         [todo]="todo"
+                         (removeTodoElement)="removeTodo($event)"
+                         (changeTodoElementStatus)="changeTodoStatus($event)"
+                         (editTodoElement)="editTodo($event)"></app-todos-element>
+    </div>
   </div>
-  <div class="todo-table__footer">footer</div>
+  <div class="todo-table__footer">
+    <div class="count">
+      <div class="count__all">
+        All: {{todosList.length}}
+        <span class="count__finished" *ngIf="counter()"> / Finished: {{counter()}}</span>
+      </div>
+    </div>
+    <div class="filter-menu">
+      <div class="filter-menu__item" (click)="showAll()">All</div>
+      <div class="filter-menu__item" (click)="showFinished()">Finished</div>
+      <div class="filter-menu__item" (click)="showInProgress()">In progress</div>
+    </div>
+  </div>
 </div>

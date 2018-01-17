@@ -25,6 +25,8 @@
   }
 
   &__footer {
+    display: flex;
+    justify-content: space-between;
     background: $bd-dark;
     padding: 2vmin;
   }
@@ -38,4 +40,17 @@
   margin: 0;
   padding: 0;
   outline: none;
+}
+
+.filter-menu {
+  display: flex;
+
+  &__item {
+    margin: 0 0 0 1em;
+    cursor: pointer;
+
+    &:hover {
+      color: #666;
+    }
+  }
 }
