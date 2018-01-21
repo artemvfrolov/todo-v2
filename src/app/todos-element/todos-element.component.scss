@@ -32,6 +32,10 @@
         opacity: 1;
       }
     }
+
+    .todo-list__row_edit & {
+      visibility: hidden;
+    }
   }
 }
 
@@ -47,6 +51,7 @@
     white-space: nowrap;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 
     &:before {
       content: '';
@@ -64,6 +69,57 @@
       &:before {
         width: 100%;
       }
+    }
+
+    .todo-list__row_edit & {
+      display: none;
+    }
+  }
+
+  &__input {
+    display: none;
+    border-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+
+    .todo-list__row_edit & {
+      display: block;
+    }
+  }
+}
+
+.control {
+  display: flex;
+  padding: 0 0 0 3vmin;
+  flex: 0 0 auto;
+  justify-content: space-around;
+  user-select: none;
+
+  &__element {
+    padding: 0 1vmin;
+    margin: 0 0 0 1vmin;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    .todo-list__row_edit &_edit {
+      visibility: hidden;
+    }
+
+    &_del {
+      font-size: 2rem;
+    }
+
+    &:hover {
+      opacity: .5;
+    }
+
+    &:first-child {
+      margin: 0;
     }
   }
 }
